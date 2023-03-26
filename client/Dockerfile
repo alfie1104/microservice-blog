@@ -1,6 +1,10 @@
 # Specify a base image
 FROM node:18-alpine
 
+# Add environment variables to use create-react-app in a docker container
+ENV CI=true
+ENV WDS_SOCKET_PORT=0
+
 # Setting a working directory of docker
 WORKDIR /app
 
